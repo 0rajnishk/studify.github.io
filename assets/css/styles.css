@@ -524,6 +524,7 @@ img{
   .menu__container{
     grid-template-columns: repeat(3, 210px);
     column-gap: 4rem;
+    
   }
   .menu__content{
     padding: 1.5rem;
