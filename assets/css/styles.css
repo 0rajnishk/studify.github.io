@@ -128,6 +128,16 @@ img{
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1);
 }
+.credit{
+  text-align: center;
+  margin-right: 15%;
+  display: block;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1);
+}
+
+
 
 /*========== LAYOUT ==========*/
 .bd-container{
@@ -581,6 +591,26 @@ img{
   margin-left: 20px; /* set the distance from the line */
 }
 
+
+
+/* ======================================credit div inside about section =================*/
+.about-image{
+  display: flex;
+  align-items: center; /* vertically center the items */
+  
+}
+
+.img1 {
+  margin-right: 20px;
+  margin-left: 20px; /* set the distance from the line */
+}
+
+.credit-text {
+  margin-right: 10%;
+  display: flex;
+  align-items: center; /* vertically center the items */
+}
+
 .vertical-line-container {
   display: block;
   margin-left: 10px;
@@ -592,6 +622,15 @@ img{
   height: 50px; /* set the height of the line */
   margin-left: 10px; /* set the distance from the container */
 }
+
+.vertical-line-text {
+  display: block;
+  border-left: 2px solid black;
+  height: 50px; /* set the height of the line */
+  margin-left: 35px; /* set the distance from the container */
+}
+
+
 
 
 /* image scroll -------------------------------------------==========================*/
