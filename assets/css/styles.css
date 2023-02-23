@@ -721,3 +721,70 @@ img{
 .navigation button.active:before {
   background-color: #333;
 }
+
+/* ==================================contanct form styles ====================================*/
+/* Contact Form Styles */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  }
+.section-heading h2 {
+  color: var(--first-color-alt);
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  }
+  
+  .contact-form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--container-color);
+  border-style: inset;
+  border-radius: 0.1px;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease-in-out;
+  }
+
+  .contact-form input:hover {
+      border: 2px solid var(--first-color);
+  }
+  
+  .contact-form textarea:hover {
+      border: 2px solid var(--first-color-alt);
+  }
+  .contact-form textarea {
+  height: 150px;
+
+  }
+  
+  
+  .contact-form button {
+  background-color: var(--first-color-alt);
+  color: var(--container-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  }
+  
+  .contact-form button:hover {
+  background-color: var(--body-color);
+  color: #08500b;
+  border: 2px solid #0c2703;
+  }
+  
