@@ -129,3 +129,41 @@ for (var i = 0; i < navButtons.length; i++) {
     sliderInterval = setInterval(nextSlide, 3000);
   });
 }
+
+//==================================== form handler =====================================================//
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    // Handle the response from the server
+    console.log('Form submitted successfully');
+  })
+  .catch(error => {
+    // Handle any errors that occur during form submission
+    console.error(error);
+  });
+
+  // Write the form data to a file on the server
+  const fileUrl = 'https://example.com/form.txt';
+  const data = new URLSearchParams(formData);
+  fetch(fileUrl, {
+    method: 'POST',
+    body: data
+  })
+  .then(response => {
+    // Handle the response from the server
+    console.log('Form data saved successfully');
+  })
+  .catch(error => {
+    // Handle any errors that occur during file write
+    console.error(error);
+  });
+});
