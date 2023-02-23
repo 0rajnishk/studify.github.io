@@ -213,17 +213,28 @@
             </section>
 
             <!--========== CONTACT US ==========-->
-            <section class="contact section bd-container" id="contact">
-                <div class="contact__container bd-grid">
-                    <div class="contact__data">
-                        <span class="section-subtitle contact__initial">Let's talk</span>
-                        <h2 class="section-title contact__initial">Contact us</h2>
-                        <p class="contact__description">Click on the contact button there you will get a form that you can fill if you have any query.</p>
-                    </div>
-
-                    <div class="contact__button">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlN_LReVjdE3avIrCFznDr0VnlqFayhzjoeACk9R-it32EVA/viewform?usp=sf_link" class="button">Contact us now</a>
-                    </div>
+            <!--========== CONTACT US ==========-->
+            <section id="contact">
+                <div class="section-heading">
+                    
+                    <h2>Contact Us</h2>
+                    <p>Feel Free to Reach Out to Us</p>
+                    
+                </div>
+                
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" aria-label="name" required>
+            
+                        <label  for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+            
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
             </section>
         </main>
