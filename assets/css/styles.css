@@ -539,11 +539,13 @@ img{
   }
   .menu__content{
     padding: 1.5rem;
-    transition: all 0.3s ease; /* Add a transition */
+   
   }
   
   
  }
+  .menu__content{
+     transition: all 0.3s ease; /* Add a transition */
   .menu__content:hover {
     transform: scale(1.08); /* Add a scale transform */
   }
