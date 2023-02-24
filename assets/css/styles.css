@@ -13,6 +13,8 @@
   --text-color-light: #A6A6A6;
   --body-color: #FBFEFD;
   --container-color: #FFFFFF;
+  --glow-color: #7ce6b5;
+  --shadow-color: #064211;
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -68,6 +70,8 @@ body.dark-theme{
   --text-color: #C7D1CC;
   --body-color: #1D2521;
   --container-color: #27302C;
+  --glow-color: #023d27;
+  --shadow-color: #d0ffed;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -351,6 +355,14 @@ img{
   border-radius: .5rem;
   box-shadow: 0 2px 4px rgba(3,74,40,.15);
   padding: .75rem;
+  transition: all 0.3s ease-in-out; /* Add a transition effect */
+  
+}
+
+.menu__content:hover {
+  background-color: var(--glow-color); /* Change the background color */
+  box-shadow: 0 0 20px var(--shadow-color);/* Add a glowing effect */
+  color: #4CAF50; /* Change the font color */
 }
 
 .menu__img{
@@ -530,15 +542,21 @@ img{
   .menu__container{
     margin-top: var(--mb-6);
   }
+  
 
   .menu__container{
-    grid-template-columns: repeat(3, 210px);
+    grid-template-columns: repeat(4, 180px);
     column-gap: 4rem;
     
   }
   .menu__content{
     padding: 1.5rem;
+   
   }
+  
+  
+ }
+ 
   .menu__img{
     width: 130px;
   }
@@ -546,7 +564,7 @@ img{
   .app__store{
     margin: 0 var(--mb-1) 0 0;
   }
-}
+
 
 @media screen and (min-width: 960px){
   .bd-container{
@@ -721,3 +739,84 @@ img{
 .navigation button.active:before {
   background-color: #333;
 }
+
+/* ==================================contanct form styles ====================================*/
+/* Contact Form Styles */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  }
+.section-heading h2 {
+  color: var(--first-color-alt);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid var(--text-color); /* Add a border */
+  padding: 30px; /* Add 20px padding */
+  border-radius: 20px; /* Add 10px rounded corners */
+  transition: all 0.1s ease; /* Add a transition */
+}
+
+.contact-form:hover {
+  transform: scale(1.03); /* Add a scale transform */
+}
+
+@media screen and (max-width: 630px) {
+  .contact-form {
+    margin: 20px;
+  }
+}
+  
+  .contact-form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+  padding: 0.5rem;
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--container-color);
+  border-style: solid;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: all 0.8s ease-in-out;
+  }
+
+  .contact-form input:hover {
+      border: 2px solid var(--first-color);
+  }
+  
+  .contact-form textarea:hover {
+      border: 2px solid var(--first-color-alt);
+  }
+  .contact-form textarea {
+  height: 150px;
+
+  }
+  
+  
+  .contact-form button {
+  background-color: var(--first-color-alt);
+  color: var(--container-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  }
+  
+  .contact-form button:hover {
+  background-color: var(--body-color);
+  color: #08500b;
+  border: 2px solid #0c2703;
+  }
