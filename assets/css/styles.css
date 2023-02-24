@@ -530,6 +530,7 @@ img{
   .menu__container{
     margin-top: var(--mb-6);
   }
+  
 
   .menu__container{
     grid-template-columns: repeat(3, 210px);
@@ -538,6 +539,13 @@ img{
   }
   .menu__content{
     padding: 1.5rem;
+    transition: all 0.3s ease; /* Add a transition */
+  }
+  
+  
+ }
+  .menu__content:hover {
+    transform: scale(1.08); /* Add a scale transform */
   }
   .menu__img{
     width: 130px;
@@ -734,10 +742,24 @@ img{
 }
 
 .contact-form {
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
   text-align: center;
+  border: 1px solid var(--text-color); /* Add a border */
+  padding: 30px; /* Add 20px padding */
+  border-radius: 20px; /* Add 10px rounded corners */
+  transition: all 0.1s ease; /* Add a transition */
+}
+
+.contact-form:hover {
+  transform: scale(1.03); /* Add a scale transform */
+}
+
+@media screen and (max-width: 630px) {
+  .contact-form {
+    margin: 20px;
   }
+}
   
   .contact-form label {
   font-size: 1.2rem;
@@ -750,11 +772,12 @@ img{
   .contact-form textarea {
   padding: 0.5rem;
   width: 100%;
+  color: var(--text-color);
   background-color: var(--container-color);
-  border-style: inset;
-  border-radius: 0.1px;
+  border-style: solid;
+  border-radius: 10px;
   margin-bottom: 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.8s ease-in-out;
   }
 
   .contact-form input:hover {
