@@ -15,6 +15,8 @@
   --container-color: #FFFFFF;
   --glow-color: #7ce6b5;
   --shadow-color: #064211;
+  --glow-color: #7ce6b5;
+  --shadow-color: #064211;
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -70,6 +72,8 @@ body.dark-theme{
   --text-color: #C7D1CC;
   --body-color: #1D2521;
   --container-color: #27302C;
+  --glow-color: #023d27;
+  --shadow-color: #d0ffed;
   --glow-color: #023d27;
   --shadow-color: #d0ffed;
 }
@@ -544,7 +548,10 @@ img{
   }
   
 
+  
+
   .menu__container{
+    grid-template-columns: repeat(4, 180px);
     grid-template-columns: repeat(4, 180px);
     column-gap: 4rem;
     
@@ -552,7 +559,12 @@ img{
   .menu__content{
     padding: 1.5rem;
    
+   
   }
+  
+  
+ }
+ 
   
   
  }
@@ -564,6 +576,7 @@ img{
   .app__store{
     margin: 0 var(--mb-1) 0 0;
   }
+
 
 
 @media screen and (min-width: 960px){
