@@ -550,7 +550,10 @@ img{
 
   
 
+  
+
   .menu__container{
+    grid-template-columns: repeat(4, 180px);
     grid-template-columns: repeat(4, 180px);
     grid-template-columns: repeat(4, 180px);
     column-gap: 4rem;
@@ -576,6 +579,7 @@ img{
   .app__store{
     margin: 0 var(--mb-1) 0 0;
   }
+
 
 
 
