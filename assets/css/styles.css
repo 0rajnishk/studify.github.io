@@ -545,7 +545,7 @@ img{
   
 
   .menu__container{
-    grid-template-columns: repeat(3, 210px);
+    grid-template-columns: repeat(4, 180px);
     column-gap: 4rem;
     
   }
