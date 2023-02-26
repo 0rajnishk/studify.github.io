@@ -82,10 +82,16 @@ body.dark-theme{
 .change-theme{
   position: absolute;
   right: 1rem;
-  top: 1.8rem;
+  top: 3rem;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
+}
+/*===============change theme for mobile phone====================*/
+@media screen and (max-width: 768px) {
+  .change-theme {
+    left: 10px;
+  }
 }
 
 body{
@@ -533,8 +539,7 @@ img{
   }
 
   .change-theme{
-    position: initial;
-    margin-left: var(--mb-2);
+    position:fixed;
   }
 
   .home__container{
@@ -837,3 +842,6 @@ img{
   color: #08500b;
   border: 2px solid #0c2703;
   }
+
+
+ 
