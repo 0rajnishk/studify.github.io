@@ -101,21 +101,33 @@ goToSlide(currentSlide);
 }
 
 function goToSlide(slideIndex) {
-var slidesContainer = document.querySelector('.slides-container');
-var slides = document.querySelectorAll('.slide');
-var slideWidth = slides[0].offsetWidth;
-slidesContainer.style.transform = 'translateX(-' + slideWidth * slideIndex + 'px)';
+  // Get the slide elements and navigation buttons
+  var slidesContainer = document.querySelector('.slides-container');
+  var slides = document.querySelectorAll('.slide');
+  var slideWidth = slides[0]?.offsetWidth;
+  var navButtons = document.querySelectorAll('.navigation button');
 
-// Update the active state of the navigation buttons
-var navButtons = document.querySelectorAll('.navigation button');
-for (var i = 0; i < navButtons.length; i++) {
-  navButtons[i].classList.remove('active');
-}
-navButtons[slideIndex].classList.add('active');
+  // Exit the function if slideIndex is out of bounds or slideWidth is undefined
+  if (slideIndex < 0 || slideIndex >= slides.length || slideWidth === undefined) {
+    return;
+  }
 
-// Stop the auto-sliding interval when user interacts with the slider
-clearInterval(sliderInterval);
+  // Update the position of the slides container
+  slidesContainer.style.transform = 'translateX(-' + slideWidth * slideIndex + 'px)';
+
+  // Update the active state of the navigation buttons
+  for (var i = 0; i < navButtons.length; i++) {
+    navButtons[i].classList.remove('active');
+  }
+
+  if (navButtons[slideIndex]) {
+    navButtons[slideIndex].classList.add('active');
+  }
+
+  // Stop the auto-sliding interval when user interacts with the slider
+  clearInterval(sliderInterval);
 }
+
 
 // Handle navigation button clicks
 var navButtons = document.querySelectorAll('.navigation button');
